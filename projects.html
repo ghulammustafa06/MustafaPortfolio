@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghulam Mustafa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(253, 252, 250);
+            color: black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #063970;
+            color: white;
+            height: 70px;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        nav ul li a:hover {
+            color: rgb(151, 101, 199);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: #063970;
+            height: 1.2px;
+            margin: 15px 84px;
+        }
+
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+            align-items: center;
+        }
+
+        .firstsection>div {
+            width: 30%;
+            font-size: 2.3rem;
+            color: #063970;
+        }
+
+        .rightsection img {
+
+            width: 100%;
+            margin: 80px 0;
+
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        .text-gray {
+            color: gray;
+            padding: 13px;
+
+        }
+
+        .secondSection {
+            height: 30vh;
+        }
+
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border: 2px solid #063970;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #063970;
+            color: #ffffff;
+        }
+
+        .line {
+            position: relative;
+            width: 200px;
+            height: 2px;
+            background-color: #063970;
+            transition: width 0.3s, background-color 0.3s;
+        }
+
+        .line:hover {
+            width: 100%;
+            background-color: #ff0000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #063970;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .transparent-button {
+            background-color: transparent;
+            border: 2px solid blueviolet;
+            color: blueviolet;
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.20s;
+        }
+
+        .button:hover {
+            background-color: black;
+        }
+
+        .footer-content {
+            padding: 22px;
+            background-color: #063970;
+            display: flex;
+            color: #ffffff;
+            justify-content: space-around;
+        }
+
+        .footer-bottom {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .animated-button {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .animated-button:hover {
+            transform: scale(1.4);
+        }
+
+        #element {
+            color: blueviolet;
+            text-shadow: #160a0a;
+            font-weight: bolder;
+
+        }
+
+        #header {
+            background-color: rgb(226, 135, 67);
+            color: #ffffff;
+            padding: 4px;
+            text-align: center;
+            margin: 30px;
+            margin-left: 280px;
+            margin-right: 280px;
+        }
+
+        #projects-container {
+            max-width: 900px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project {
+            width: 300px;
+            background-color: #f2f7f4;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        .project p {
+            color: #777;
+            text-align: justify;
+        }
+
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        #github-button {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .github-link {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .github-link:hover {
+            background-color: #0e8d4d;
+        }
+
+        p1 {
+            color: blue;
+            font-weight: bold;
+        }
+
+        p2 {
+            color: #062516;
+        }
+
+        p3 {
+            color: orange;
+            font-weight: bold;
+        }
+
+    </style>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Mustafa's Portfolio</div>
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="services.html">Services </a></li>
+                <li><a href="projects.html">Projects </a></li>
+                <li><a href="contact.html">Contact Me </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div> <span id="element"></span> </div>
+            <div class="rightsection"><img src="p1.png" alt=""></div>
+        </section>
+        <div id="header">
+            <h1>MY PROJECTS</h1>
+        </div>
+
+        <div id="projects-container">
+            <div class="project animated-fadeIn">
+                <h3>Personal Portfolio Website</h3>
+                <img src="port.png" alt="Project 1 Image">
+                <p>The portfolio website development project aims to create a professional, visually appealing, and
+                    user-friendly
+                    online platform that effectively showcases my work, skills, and achievements. Through careful
+                    planning, design,
+                    and implementation, the website will provide a powerful tool for me to make a lasting impression and
+                    attract
+                    potential clients and collaborators.</p>
+                <p2>Language Used</p2>
+                <p3>HTML</p3>
+                <p2> & </p2>
+                <p1>CSS</p1>
+            </div>
+            <div class="project animated-fadeIn" style="animation-delay: 0.2s;">
+                <h3>Bank Account Management System</h3>
+                <img src="Bank.png" alt="Project 1 Image">
+                <p>The purpose of this project proposal is to outline the development of a personal portfolio website
+                    utilizing
+                    HTML. The website will consist of five essential pages: Home, About, Services, Projects, and Contact
+                    Me. This
+                    proposal will present the objectives and significance of the project, highlighting the importance of
+                    a personal
+                    portfolio website in showcasing expertise and achievements.</p>
+                <p2>Language Used</p2>
+                <p1>C++</p1>
+                <!-- Add more details, images, links, etc. as needed -->
+            </div>
+            <!-- Add more details, images, links, etc. as needed -->
+        </div>
+        <!-- Add more project cards as needed -->
+        </div>
+
+        <div id="github-button">
+            <a href="https://github.com/ghulammustafa06" class="github-link" target="_blank">Visit Github</a>
+        </div>
+        <section class="secondSection">
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Mustafa’s Portfolio</h2>
+            <nav>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-media">
+                <a href="https://web.facebook.com/ghulammustafa066" target="_blank" rel="noopener noreferrer">
+                    <img src="facebook.png" alt="Facebook" class="animated-button" style="height: 30px;">
+                </a>
+                <a href="https://www.instagram.com/ghulammustafa06/" target="_blank" rel="noopener noreferrer">
+                    <img src="instagram.png" alt="Instagram" class="animated-button" style="height: 30px;">
+                </a>
+                <a href="https://www.linkedin.com/in/ghulammustafa06/" target="_blank" rel="noopener noreferrer">
+                    <img src="linkedin.png" alt="LinkedIn" class="animated-button" style="height: 30px;">
+                </a>
+                <a href="https://twitter.com/GhulamM40961281" target="_blank" rel="noopener noreferrer">
+                    <img src="twitter.png" alt="Twitter" class="animated-button" style="height: 30px;">
+                </a>
+                <a href="https://www.youtube.com/channel/UCYR0jBS7ZbeV3lYaYWUmiVw" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="youtube.png" alt="YouTube" class="animated-button" style="height: 30px;">
+                </a>
+                <a href="https://wa.me/+923495457536" target="_blank" rel="noopener noreferrer">
+                    <img src="whatsapp.png" alt="WhatsApp" class="animated-button" style="height: 30px;">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&#169; mustafasportfolio.com | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['My Creative Endeavors'],
+            typeSpeed: 60,
+        });
+    </script>
+</body>
+</html>
